@@ -204,14 +204,14 @@ export function SoftwareGrid({ isAuthenticated, onAuthRequired }: SoftwareGridPr
                   </span>
                 </div>
                 <span className="text-white">
-                  {Math.round(software.downloadProgress)}%
+                  {Math.round(software.downloadProgress || 0)}%
                 </span>
               </div>
               
               <div className="w-full bg-cyber-dark rounded-full h-2 overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-r from-cyber-blue to-cyber-purple transition-all duration-300"
-                  style={{ width: `${software.downloadProgress}%` }}
+                  style={{ width: `${software.downloadProgress || 0}%` }}
                 />
               </div>
               
