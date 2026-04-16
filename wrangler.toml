@@ -1,0 +1,13 @@
+name = "cyberpunk-dashboard"
+main = ".next/server/app/page.js"
+compatibility_date = "2024-04-16"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "cyberpunk-dashboard"
+routes = [
+  { pattern = "yourdomain.com/*", zone_name = "yourdomain.com" }
+]
+
+[env.preview]
+name = "cyberpunk-dashboard-preview"
