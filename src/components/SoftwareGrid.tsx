@@ -198,7 +198,7 @@ export function SoftwareGrid({ isAuthenticated, onAuthRequired }: SoftwareGridPr
                 <div className="flex items-center space-x-2">
                   <Loader2 className="w-4 h-4 animate-spin text-cyber-blue" />
                   <span className="text-cyber-blue">
-                    {software.downloadProgress < 50 
+                    {(software.downloadProgress || 0) < 50 
                       ? 'Generating Secure Token...' 
                       : 'Downloading...'}
                   </span>
